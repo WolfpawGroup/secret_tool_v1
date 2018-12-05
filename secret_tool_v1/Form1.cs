@@ -32,7 +32,7 @@ namespace secret_tool_v1
 			string tmp = "";
 			for (int i = 0; i < 1000; i++)
 			{
-				int[] l = k.gen5(last); 
+				int[] l = k.gen5(last);  
 				for (int x = 0; x < l.Length; x++)
 				{
 					tmp += (char)(20 + ((l[x] + i + x) % 235));

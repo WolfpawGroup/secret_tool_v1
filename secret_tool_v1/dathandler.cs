@@ -67,51 +67,16 @@ namespace secret_tool_v1
 		{
 
 		}
+
+		public string genDatEncKey()
+		{
+			string key = "DATKEY";
+			var proc = System.Diagnostics.Process.GetCurrentProcess();
+			key += "";
+
+			return "";
+		}
 	}
 
-	public partial class NativeMethods
-	{
-
-		///Return Type:				HANDLE					->	void*
-		///lpFileName:				LPCWSTR					->	WCHAR*
-		///dwDesiredAccess:			DWORD					->	unsigned int
-		///dwShareMode:				DWORD					->	unsigned int
-		///lpSecurityAttributes:	LPSECURITY_ATTRIBUTES	->	_SECURITY_ATTRIBUTES*
-		///dwCreationDisposition:	DWORD					->	unsigned int
-		///dwFlagsAndAttributes:	DWORD					->	unsigned int
-		///hTemplateFile:			HANDLE					->	void*
-		[DllImportAttribute("kernel32.dll", EntryPoint = "CreateFileW")]
-		public static extern System.IntPtr CreateFileW(
-			[InAttribute()] [MarshalAsAttribute(UnmanagedType.LPWStr)] string lpFileName,
-			uint dwDesiredAccess,
-			uint dwShareMode,
-			[InAttribute()] System.IntPtr lpSecurityAttributes,
-			uint dwCreationDisposition,
-			uint dwFlagsAndAttributes,
-			[InAttribute()] System.IntPtr hTemplateFile
-		);
-
-	}
 	
-	public partial class NativeConstants
-	{
-
-		/// GENERIC_WRITE -> (0x40000000L)
-		public const int GENERIC_WRITE = 1073741824;
-
-		/// FILE_SHARE_DELETE -> 0x00000004
-		public const int FILE_SHARE_DELETE = 4;
-
-		/// FILE_SHARE_WRITE -> 0x00000002
-		public const int FILE_SHARE_WRITE = 2;
-
-		/// FILE_SHARE_READ -> 0x00000001
-		public const int FILE_SHARE_READ = 1;
-
-		/// CREATE_ALWAYS -> 2
-		public const int CREATE_ALWAYS = 2;
-
-		/// OPEN_ALWAYS -> 4
-		public const int OPEN_ALWAYS = 4;
-	}
 }

@@ -15,5 +15,11 @@ namespace secret_tool_v1
 		{
 			InitializeComponent();
 		}
+
+		private void btn_LoginRegister_Click(object sender, EventArgs e)
+		{
+			dathandler d = new dathandler();
+			d.writeDat("Hello World");
+		}
 	}
 }

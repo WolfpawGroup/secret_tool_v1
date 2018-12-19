@@ -112,7 +112,7 @@ namespace secret_tool_v1
 				else if(c < 52) { ret += "."; }
 				else if(c < 54) { ret += "|"; }
 				else if(c < 56) { ret += "*"; }
-				else if(c < 57) { ret += "x"; }
+				else if(c < 57) { ret += "×"; }
 				else if(c < 66) { ret += "?"; }
 				else if(c < 68) { ret += "-"; }
 				else if(c < 70) { ret += "_"; }
